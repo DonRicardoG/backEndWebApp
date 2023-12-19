@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/db.js";
+// hola
 
 export const Clients = sequelize.define(
   "clients",
