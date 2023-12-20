@@ -4,7 +4,6 @@ export const getClients = async (req, res) => {
   try {
     const clients = await Clients.findAll();
 
-    console.log(clients);
     res.json(clients);
   } catch (error) {
     return res.status(500).json({ message: error.message });
