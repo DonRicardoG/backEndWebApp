@@ -22,11 +22,12 @@ export const getClient = async (req, res) => {
 };
 
 export const createClient = async (req, res) => {
-  const { name, email, website } = req.body;
+  const { name, username, email, website } = req.body;
 
   try {
     const newClient = await Clients.create({
       name,
+      username,
       email,
       website,
     });

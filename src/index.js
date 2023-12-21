@@ -1,9 +1,11 @@
 import app from "./app.js";
 import { sequelize } from "./database/db.js";
+import { fillDb } from "./middlewares/filldb.js";
 
 async function main() {
   try {
-    await sequelize.sync({ force: false });
+    await sequelize.sync({ force: true });
+    await fillDb();
     app.listen(4000);
     console.log("Server is listening on port", 4000);
   } catch (error) {
