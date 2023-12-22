@@ -4,7 +4,7 @@ import { fillDb } from "./middlewares/filldb.js";
 
 async function main() {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
     await fillDb();
     app.listen(4000);
     console.log("Server is listening on port", 4000);
