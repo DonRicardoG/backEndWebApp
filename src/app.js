@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
+    "postgres://backend_webapp_user:bwt6CdJsKAG5zCWCA0a6peZjKqlMNk2M@dpg-cmemrnn109ks73c8obd0-a/backend_webapp, X-Requested-With, Content-Type, Accept"
   );
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
