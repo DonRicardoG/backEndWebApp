@@ -9,7 +9,7 @@ async function main() {
   try {
     await sequelize.sync({ force: false });
     // await fillDb();
-    app.listen(28514);
+    app.listen(5432);
   } catch (error) {
     console.error("Unable to connect to the database", error);
   }
