@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize";
+import "dotenv/config";
 
-export const sequelize = new Sequelize(
-  "postgresql://postgres:*1a2*12-C2CEB41dgcfe*EFfBG3BD-5d@viaduct.proxy.rlwy.net:28514/railway"
-);
+const DB_URL = process.env.DB_URL;
+
+export const sequelize = new Sequelize(DB_URL);
