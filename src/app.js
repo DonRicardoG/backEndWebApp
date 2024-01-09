@@ -3,6 +3,9 @@ import clientRoutes from "./routes/clients.routes.js";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import morgan from "morgan";
+import "dotenv/config";
+
+const Db_url = process.env.DB_URL;
 
 const app = express();
 
@@ -13,10 +16,7 @@ app.use(bodyParser.json({ limit: "50mb" }));
 app.use(cookieParser());
 app.use(morgan("dev"));
 app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "postgresql://postgres:*1a2*12-C2CEB41dgcfe*EFfBG3BD-5d@viaduct.proxy.rlwy.net:28514/railway"
-  );
+  res.header("Access-Control-Allow-Origin", Db_url);
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Headers",
