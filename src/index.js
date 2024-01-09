@@ -8,6 +8,7 @@ const port = process.env.PORT;
 async function main() {
   try {
     await sequelize.sync({ force: false });
+    console.log("after sequelize");
     // await fillDb();
     app.listen(5432);
   } catch (error) {
