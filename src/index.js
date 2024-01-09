@@ -8,7 +8,7 @@ const port = process.env.PORT;
 async function main() {
   try {
     await sequelize.sync({ force: false });
-    await fillDb();
+    // await fillDb();
     app.listen(28514);
   } catch (error) {
     console.error("Unable to connect to the database", error);
