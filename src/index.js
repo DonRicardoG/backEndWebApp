@@ -11,6 +11,7 @@ async function main() {
     console.log("after sequelize");
     // await fillDb();
     app.listen(5432);
+    console.log("after listen");
   } catch (error) {
     console.error("Unable to connect to the database", error);
   }
