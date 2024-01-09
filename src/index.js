@@ -1,7 +1,7 @@
 import app from "./app.js";
 import "dotenv/config";
 import { sequelize } from "./database/db.js";
-import { fillDb } from "./middlewares/filldb.js";
+// import { fillDb } from "./middlewares/filldb.js";
 
 const port = process.env.PORT;
 
